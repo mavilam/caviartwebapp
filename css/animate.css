@@ -9,6 +9,20 @@
  */
 
 
+/*PRUEBA DE LA OPCION TRANSICION DE CSS3*/
+ .prueba_transicion{
+   -webkit-transition: all 0.25s linear 0s;
+
+ }
+
+
+ /*PRUEBA DE LA OPCION TRANSICION DE CSS3*/
+  .prueba_transicion:hover{
+    transform: scale(1.10, 1.10);
+    z-index: 2;
+
+  }
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

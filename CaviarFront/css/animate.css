@@ -2725,8 +2725,9 @@
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-delay: 0s; /*Cambio del delay de la animacion*/
+  -webkit-animation-timing-function: linear;
 }
 
 @-webkit-keyframes zoomInDown {
@@ -2933,8 +2934,10 @@
 .zoomOut {
   -webkit-animation-name: zoomOut;
   animation-name: zoomOut;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 0s; /*Cambio del delay de la animacion*/
+  -webkit-animation-timing-function: linear;
+
 }
 
 @-webkit-keyframes zoomOutDown {

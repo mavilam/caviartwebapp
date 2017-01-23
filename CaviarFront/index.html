@@ -85,10 +85,6 @@
         <!-- /.container -->
     </nav>
 
-<style media="screen">
-
-</style>
-
 
     <!-- Intro Header -->
     <header class="intro">
@@ -96,7 +92,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-                          <img id="logo_caviart" class="col-xs-12" src="img/logo_caviart.png" alt="" style="margin-bottom:50px">
+                          <img id="logo_caviart" class="col-xs-12" src="img/logo_caviart.png" alt="" style="margin-bottom:100px; ">
 
                         <!--<a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -104,7 +100,11 @@
                     </div>
                 </div>
 
-                <div class="row col-lg-10 col-lg-offset-1">
+                <script type="text/javascript">
+
+                </script>
+
+                <div class="row col-lg-12">
                   <div class="col-xs-2" style="margin:0px; padding: 0px;">
                       <img class="col-xs-12 prueba_transicion" src="img/logo_caviart_fondo.png" alt="" style="margin:0px; padding: 0px;"  >
 
@@ -156,18 +156,16 @@
 
       document.getElementById('logo_caviart').addEventListener('mouseover', function(){
         document.getElementById('logo_caviart').className = "col-xs-12 animated zoomOut"
+        document.getElementById("logo_caviart").addEventListener("animationend", function(){
+          document.getElementById("logo_caviart").src = "img/logo_caviart_fondo.png"
+          document.getElementById("logo_caviart").className =  "col-xs-12 animated zoomIn"
+        }, false);
+
       })
       document.getElementById('logo_caviart').addEventListener('mouseout', function(){
         document.getElementById('logo_caviart').className = "col-xs-12 animated zoomIn"
+
       })
-
-      function ZoomOut(element){
-        element.className = "col-xs-12 animated zoomOut"
-      }
-
-      function ZoomIn(element){
-        element.className = "col-xs-12 animated zoomIn"
-      }
 
 
     </script>

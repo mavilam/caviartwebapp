@@ -105,14 +105,14 @@ a:focus {
     padding: 20px 0;
     border-bottom: none;
     letter-spacing: 1px;
-    background: #e6e6e6; /*Antes Transparent*/
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0; /*Antes Transparent*/
     -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: #e6e6e6;;
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
     /*border-bottom: 1px solid rgba(255, 255, 255, 0.3); Borde inferior de la navbar al hacer scroll*/
   }
 }
@@ -124,7 +124,7 @@ a:focus {
   text-align: center;
   color: black;
   /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;*/
-  background-color: #e6e6e6;
+  background-color: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

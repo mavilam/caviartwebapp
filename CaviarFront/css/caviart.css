@@ -5,10 +5,17 @@
 
  }
 
-
  /*PRUEBA DE LA OPCION TRANSICION DE CSS3*/
   .prueba_transicion:hover{
     transform: scale(1.25, 1.25);
     z-index: 2;
 
   }
+
+  #quienes{
+    background-image: url("/img/pezquienes.png");
+  }
+
+#contactoimg{
+  width: 149%
+}

@@ -1,6 +1,6 @@
 
-@font-face { font-family: Nilland; src: url('fonts/nilland/Nilland-Black.ttf'); }
-@font-face { font-family: Nilland; font-weight: bold; src: url('fonts/nilland/Nilland-Bold.ttf');}
+@font-face { font-family: Nilland; src: url('../fonts/nilland/Nilland-Bold.ttf'); }
+@font-face { font-family: Nilland; font-weight: bold; src: url('../fonts/nilland/Nilland-Black.ttf');}
 
 body{
   font-family: "Nilland";

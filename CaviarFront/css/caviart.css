@@ -1,4 +1,11 @@
 
+@font-face { font-family: Nilland; src: url('../fonts/nilland/Nilland-Bold.ttf'); }
+@font-face { font-family: Nilland; font-weight: bold; src: url('../fonts/nilland/Nilland-Black.ttf');}
+
+body{
+  font-family: "Nilland";
+}
+
 /*PRUEBA DE LA OPCION TRANSICION DE CSS3*/
  .prueba_transicion{
    -webkit-transition: all 0.25s linear 0s;

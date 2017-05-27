@@ -19,14 +19,6 @@ body{
 
 }
 
-#quienes{
-  background-image: url("/img/pezquienes.png");
-}
-
-#contactoimg{
-  width: 149%
-}
-
 a{
   color: black
 }
@@ -43,37 +35,77 @@ a{
   color:#e52d27
 }
 
-@media (max-width: 417px) {
+@media (max-width: 352px) {
     #logo-contacto{padding-top:30px}
-    #telefono{font-size: 20px; padding:0px; padding-top:25px; padding-left: 15px }
+    #telefono{font-size: 18px; padding:0px; padding-top:50px; padding-left: 30px }
+    #logo-contacto{min-width: 50px}
+    #quienes-background{height: 100px}
+
+}
+
+
+@media (min-width: 352px) {
+    #logo-contacto{padding-top:35px}
+    #telefono{font-size: 25px; padding:0px; padding-top:50px; padding-left: 15px }
+    #icons{padding-top: 0px}
+    #quienes-background{height: 125px}
+}
+
+@media (min-width: 419px) {
+    #logo-contacto{padding-top:15px}
+    #telefono{font-size: 25px; padding:0px; padding-top:35px; padding-left: 0px }
+    #icons{padding-top: 0px}
+    #quienes-background{height: 150px}
 
 }
 
 @media (min-width: 500px) {
-    #telefono{font-size: 30px; padding:0px}
-    #icons{padding-top: 25px}
-}
-
-@media (max-width: 616px) {
-    #telefono{font-size: 30px; padding:0px}
+    #logo-contacto{padding-top:15px}
+    #telefono{font-size: 30px; padding:0px; padding-top:35px; padding-left: 0px }
     #icons{padding-top: 0px}
+    #quienes-background{height: 190px}
+
 }
 
+@media (min-width: 616px) {
+    #logo-contacto{padding-top:0px; padding:0px; padding-left: 20px}
+    #telefono{font-size: 30px; padding:0px; padding-top:30px;padding-left:15px;}
+    #icons{padding-top: 25px}
+    #quienes-background{height: 230px}
+}
+
+@media (min-width: 800px) {
+    #logo-contacto{padding-top:0px; padding:0px; padding-left: 20px}
+    #telefono{font-size: 30px; padding:0px; padding-top:30px;padding-left:15px;}
+    #icons{padding-top: 25px}
+    #quienes-background{height: 300px}
+}
 
 
 @media (min-width: 991px) {
-    #telefono{font-size: 35px;}
-    #icons{padding-top: 25px}
+    #logo-contacto{padding-top:0px}
+    #telefono{font-size: 35px; padding:0px; padding-top:20px;padding-left:0px;}
+    #icons{padding-top: 0px; font-size: 65px; padding-bottom: 30px}
+    #quienes-background{height: 370px}
 }
 
 @media (min-width: 1199px) {
-    #telefono{font-size: 35px;}
-    #icons{padding-top: 25px}
+    #logo-contacto{padding-top:0px}
+    #telefono{font-size: 35px; padding:0px; padding-top:20px;padding-left:0px;}
+    #icons{padding-top: 0px; font-size: 65px; padding-bottom: 30px}
+    #quienes-background{height: 450px}
 }
 
-@media (min-width: 1200px) {
-    #telefono{font-size: 35px;}
-    #icons{padding-top: 25px}
+@media (min-width: 1450px) {
+    #logo-contacto{padding-top:0px}
+    #telefono{font-size: 35px; padding:0px; padding-top:20px;padding-left:0px;}
+    #icons{padding-top: 0px; font-size: 65px; padding-bottom: 30px}
+    #quienes-background{height: 550px}
 }
 
-
+@media (min-width: 1770px) {
+    #logo-contacto{padding-top:0px}
+    #telefono{font-size: 35px; padding:0px; padding-top:20px;padding-left:0px;}
+    #icons{padding-top: 0px; font-size: 65px; padding-bottom: 30px}
+    #quienes-background{height: 600px}
+}

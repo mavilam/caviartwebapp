@@ -46,7 +46,7 @@ a{
 
 @media (min-width: 352px) {
     #logo-contacto{padding-top:35px}
-    #telefono{font-size: 25px; padding:0px; padding-top:50px; padding-left: 15px }
+    #telefono{font-size: 22px; padding:0px; padding-top:55px; padding-left: 25px }
     #icons{padding-top: 0px}
     #quienes-background{height: 125px}
 }

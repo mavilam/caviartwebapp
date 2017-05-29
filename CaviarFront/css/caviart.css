@@ -27,11 +27,23 @@ a{
   color:#3b5998
 }
 
+#fb-icon:focus{
+  color:#3b5998
+}
+
 #instagram-icon:hover{
   color:#fb3958
 }
 
+#instagram-icon:focus{
+  color:#fb3958
+}
+
 #youtube-icon:hover{
+  color:#e52d27
+}
+
+#youtube-icon:focus{
   color:#e52d27
 }
 

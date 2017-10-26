@@ -1,0 +1,908 @@
+@font-face { font-family: CaviarDream; src: url('../fonts/caviarDream/CaviarDreams.ttf'); }
+@font-face { font-family: BebasNeue; src: url('../fonts/bebasNeue/BebasNeue.ttf'); }
+
+body{
+  font-family: "CaviarDream";
+}
+
+a{
+  color: black;
+}
+
+/* NAV */
+
+.navbar-custom{
+    box-shadow: 5px 6px 12px 0px rgba(0, 0, 0, 0.26);
+    border-bottom: 1px solid rgba(144, 144, 144, 0.18);
+    border-width: 4px;
+}
+
+/* REPRODUCTOR DE VIDEOS DEL HOME */
+
+.separator {
+    border-bottom: 1px solid grey;
+}
+
+.video-item {
+    width: 40%;
+}
+
+.vid-container {
+    position: relative;
+    padding-bottom: 35.6%;
+    padding-top: 30px;
+    height: 0;
+}
+
+.vid-container iframe,
+.vid-container object,
+.vid-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vid-list-container {
+    width: 92%;
+    overflow: hidden;
+    margin: 20px 0px 0px 4%;
+    padding: 20px 0px 20px 0px;
+}
+
+.vid-list {
+    width: 1250px;
+    position: relative;
+    top: 0;
+    left: 10px;
+    cursor: pointer;
+}
+
+.vid-item {
+    display: block;
+    width: 168px;
+    height: 168px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.thumb {
+    overflow: hidden;
+    height: 84px;
+}
+
+.thumb img {
+    width: 100%;
+    position: relative;
+    top: -50px;
+    height: 96px;
+}
+
+.vid-item .desc {
+    color: #21A1D2;
+    font-size: 15px;
+    margin-top: 5px;
+    word-break: break-word;
+}
+
+.arrows {
+    position: relative;
+    width: 100%;
+}
+
+.arrow-left {
+    color: #fff;
+    position: absolute;
+    background: #a7a7a7;
+    padding: 15px;
+    left: -25px;
+    top: -130px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.arrow-right {
+    color: #fff;
+    position: absolute;
+    background: #a7a7a7;
+    padding: 15px;
+    right: -25px;
+    top: -130px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background: #747474;
+}
+
+@media (max-width: 624px) {
+    .arrows {
+        position: relative;
+        margin: 0 auto;
+        width: 96px;
+    }
+    .arrow-left {
+        left: 0;
+        top: 0px;
+    }
+
+    .arrow-right {
+        right: 0;
+        top: 0px;
+    }
+
+    #titulo_video {
+        font-size: 23px;
+    }
+}
+
+section{
+    margin: 0 auto !important;
+}
+
+#cabecera {
+    width: 100%;
+    height: auto;
+    padding: 75px 0;
+    text-align: center;
+    color: black;
+    /* background: url(../img/intro-bg.jpg) no-repeat bottom center scroll; */
+    background-color: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    background-size: cover;
+}
+
+#titulo_video {
+    -webkit-margin-before: 0.4em;
+    -webkit-margin-after: 0.4em;
+    word-break: break-word;
+    font-family: "BebasNeue";
+    letter-spacing: 3px;
+    font-size: 56px;
+}
+
+#logo_caviart {
+    width: 30%;
+}
+
+.navbar-nav {
+    justify-content: space-between;
+    float: none !important;
+}
+
+.row-peromingo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#div_filtros{
+    margin-left: 3%;
+}
+
+#video-ficha{
+    width: 100%;
+    height: 300px;
+}
+
+#div_busqueda{
+    margin-top: 1%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#div_correo_suscripcion{
+    display: flex;
+    justify-content: center;
+}
+
+.glyphicon-search{
+    cursor: initial;
+}
+
+.div-logo-seccion{
+    float: right;
+}
+
+.nombre-seccion{
+    font-size:31px; 
+    text-align:left;
+    margin-left: 1%;
+    margin-top: 3%;
+    margin: 3% 0px 0px 1%;
+}
+
+.logo-seccion{
+    min-width:75px; 
+    max-width: 150px; 
+    padding: 0px;
+}
+
+.play-icon {
+    position: relative;
+    z-index: 1;
+    top: 21px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.scaleIn:hover {
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.scaleIn:hover .play-icon {
+    color: rgba(255, 255, 255, 1);
+}
+
+.scaleOut {
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+#cabecera .container{
+    width: 70%;
+}
+
+#correo{
+    font-size:29px;
+    margin-top: 20px;
+}
+
+/* SECCION TRABAJOS */
+
+
+.vid-item-trabajos{
+    padding: 0;
+    margin: 20px auto 20px auto;
+    width: 30%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 5px 5px 5px 5px;
+    display: grid;
+    position: relative;
+    opacity: 0;
+    cursor: default;
+}
+
+@keyframes animate-opacity {
+    0%   {opacity:.0;}
+    33%  {opacity:.3.5;}
+    66%  {opacity:.6.5;}
+    100%  {opacity:1;}
+}
+
+#nofound{
+    display: none;
+    text-align: left;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.video-visible-animation{
+    -webkit-animation: animate-opacity 1.5s linear forwards;
+    animation: animate-opacity 1.5s linear forwards;
+}
+
+.video-trabajo{
+    width: 100%;
+    height: 250px;
+    margin-bottom: auto;
+}
+
+@media (max-width: 992px) {
+    .vid-item-trabajos{
+        width: 45%;
+    }
+    .video-trabajo{
+        height: 200px;
+    }
+    #cabecera .container{
+        width: 90%;
+    }
+    .list-actors-item{
+        width: 48% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #titulo_video{
+        font-size: 33px;
+    }
+    .list-actors-item-actor-pic{
+        width: 115px !important;
+        height: 105px !important;
+    }
+    .list-actors-item-actor{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 568px) {
+    .vid-item-trabajos{
+        width: 95%;
+    }
+    .video-trabajo{
+        height: 250px;
+    }
+    .title-vid-trabajo{
+        font-size: 17px !important;
+    }
+    #logo_caviart{
+        width: 37% !important;
+    }
+    .list-actors-item-actor-pic{
+        width: 100% !important;
+    }
+    .list-actors-item-actor-info{
+        width: 100% !important;
+    }
+    #comentarios{
+        padding-top: 30px;
+    }
+    #comments-container{
+        width: 400px !important;
+    }
+    .list-actors-item-actor-pic {
+        width: 125px !important;
+    }
+}
+
+
+@media (max-width: 450px) {
+    #contact-data{
+      justify-content: center !important;
+    }
+    #correo_suscripcion{
+        width: -webkit-fill-available !important;
+    }
+    #correo{
+        font-size: 23px !important;
+    }
+    .navbar-nav{
+        justify-content: center !important;
+    }
+    #comments-container{
+        width: 300px !important;
+    }
+    .list-actors-item-actor-pic {
+        width: 85px !important;
+        height: 85px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .cabecera-seccion{
+        justify-content: center !important;
+    }
+    #comments-container{
+        width: 260px !important;
+    }
+    .list-actors-item-actor-pic {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
+#check_suscripcion{
+    margin-top: 2%;
+}
+
+.title-vid-trabajo{
+    font-size: 19px;
+    word-break: break-word;
+    margin-bottom: inherit;
+    padding: 2% 1% 6% 1%;
+    line-height: 1.2;
+    cursor: default;
+}
+
+.scroll-born{
+    width: 100%;
+    margin-bottom: 250px;
+}
+
+.scroll-dead{
+    width: 0;
+    margin-bottom: 0;
+}
+
+.separator-trabajos{
+    border-top: 1px solid grey;
+    -webkit-margin-after: 0.4em;
+}
+
+.ficha-vid-trabajo{
+    font-size: 18px;
+    word-break: break-word;
+}
+
+.ficha-vid-trabajo a{
+    color: #0076ff;
+}
+.ficha-vid-trabajo a:hover{
+    color: rgba(0, 119, 255, 0.73);
+    text-decoration: underline;
+}
+
+.separator-trabajos-div{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* FICHA INDIVIDUAL */
+
+.head-pez{
+    margin-top: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.logo-pez{
+    min-width: 100px;
+    max-width: 200px;
+}
+
+#ficha-cuerpo{
+    margin-top: 20px;
+}
+
+#img-ficha{
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto;
+}
+
+.texto-quienes{
+    padding-top: 22px;
+}
+
+#sinopsis{
+    text-align: justify;
+    margin: 2em auto 0 auto;
+    padding: 0;
+}
+
+.list-actors-title{
+    text-align: center;
+}
+
+.list-actors{
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-actors-item{
+    width: 32%;
+    margin: 1% auto;
+    padding: 1%;
+}
+
+#categorias{
+    background-color: #e6e6e6;
+    position: absolute;
+}
+
+.cabecera-seccion{
+    justify-content: space-between;
+    align-items: center;
+}
+
+#random-frase{
+    font-size:40px !important; 
+    margin-top: 30px !important;
+}
+
+.div-nombre-seccion{
+    margin-left:4%;
+}
+
+#categoriasDown, #categoriasDown:active{
+    background-color: transparent;
+    border: 0;
+    font-size: 17px;
+}
+
+#categoria-seleccionada{
+    text-transform: none;
+}
+
+#enviarSuscri{
+    border: 0;
+    font-size: 35px;
+    margin-top: 3%;
+    font-family: "CaviarDream";
+}
+
+#enviarSuscri:active{
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+#enviarSuscri:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#enviarSuscri:focus{
+    background-color: #e6e6e6;
+}
+
+.list-actors-item-actor-pic{
+    /*width: 28%;*/
+    width: 85px;
+    height: 95px;
+    margin-right: 2%;
+}
+
+.list-actors-item-character{
+    margin-top: 3%;
+}
+
+.list-actors-item-actor-info{
+    width: 60%;
+}
+
+.list-actors-item-actor-info-text{
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 13px;
+}
+
+#lista-orden{
+    background-color: #e6e6e6;
+    position: absolute;
+    box-shadow: none;
+    border: 0;
+    letter-spacing: 1.5px;
+    top: 100%;
+    left: 8%;
+}
+
+#lista-orden li:hover{
+    background-color: white;
+    cursor: pointer;    
+}
+
+#contact-data{
+    justify-content: space-between;
+}
+
+#contact-background {
+    background-image: url("../img/caviartcontacto1.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#checkSuscri:focus{
+    outline: 5px auto rgba(255, 0, 0, 0.8);;
+    outline-offset: -2px;
+}
+
+#suscripcion_completa{
+    display: none;
+}
+
+#div-comments-container{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    margin: 50px 0px 75px 0px;
+}
+
+#comentario{
+    resize: none;
+}
+
+
+.custom-field{
+    border: 0px;
+    box-shadow: none;
+    background-color: rgb(230, 230, 230) !important;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+}
+
+.custom-field:focus{
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+}
+
+#comentarios{
+    padding: 26px 10px 20px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.comentarios-nombre{
+    -webkit-margin-after: 0.5em;
+}
+
+.comentarios-comenta{
+    -webkit-margin-before: 0em;
+    text-align: justify;
+    padding-left: 10px;
+}
+
+#comments-container{
+    width: 500px;
+    align-items: center;
+}
+
+#enviarComentario{
+    width: 100%;
+    margin: 20px 0px 10px 0px;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+}
+
+#comentario_enviado{
+    display: none;
+    text-align: center;
+}
+
+#comentario_enviado_reload{
+    font-size: 14px;
+}
+
+.votos{
+    width: 40px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.formulario-text{
+    margin:10px; 
+    font-size:25px;
+}
+
+#formulario-caviart{
+    justify-content: left;
+    padding-bottom: 100px;
+}
+
+.formulario-text{
+    font-size: 30px;
+}
+
+.fa{
+    cursor: pointer;
+}
+
+.preview {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media screen and (max-width: 996px) {
+      .preview {
+        margin-bottom: 20px; } }
+  
+  .preview-pic {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  
+  .preview-thumbnail.nav-tabs {
+    border: none;
+    margin-top: 15px; }
+    .preview-thumbnail.nav-tabs li {
+      width: 18%;
+      margin-right: 2.5%; }
+      .preview-thumbnail.nav-tabs li img {
+        max-width: 100%;
+        display: block; }
+      .preview-thumbnail.nav-tabs li a {
+        padding: 0;
+        margin: 0; }
+      .preview-thumbnail.nav-tabs li:last-of-type {
+        margin-right: 0; }
+  
+  .tab-content {
+    overflow: hidden; }
+    .tab-content img {
+      width: 100%;
+      -webkit-animation-name: opacity;
+              animation-name: opacity;
+      -webkit-animation-duration: .3s;
+              animation-duration: .3s; }
+  
+  .card {
+    margin-top: 50px;
+    background: #e6e6e6;
+    padding: 3em;
+    line-height: 1.5em; 
+    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.2);}
+  
+    @media screen and (min-width: 997px) {
+        .wrapper {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex; 
+        } 
+    }
+  
+  .details {
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; 
+        }
+  
+  .colors {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  
+  .product-title, .price, .sizes, .colors {
+    text-transform: UPPERCASE;
+    font-weight: bold; }
+  
+  .checked, .price span {
+    opacity: 1; }
+  
+  .product-title, .rating, .product-description, .price, .vote, .sizes {
+    margin-bottom: 15px; }
+  
+    .product-description{
+        text-align: left;
+        line-height: 27px;
+    }
+
+  .product-title {
+    margin-top: 0; 
+    text-align: center;}
+  
+  .size {
+    margin-right: 10px; }
+    .size:first-of-type {
+      margin-left: 40px; }
+  
+.column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#fb-icon:hover{
+    color:#3b5998;
+  }
+  
+  #instagram-icon:hover{
+    color:#ff8297;
+  }
+  
+  #youtube-icon:hover{
+    color:#e52d27;
+  }
+  
+  #telefono{
+    display: grid;
+    align-items: center;
+    font-size: 35px;
+    margin-right: 20px;
+    margin-left: 3%;
+  }
+
+  .color {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    height: 2em;
+    width: 2em;
+    border-radius: 2px; }
+
+    .color:first-of-type {
+      margin-left: 20px; }
+  
+        #busqueda{
+            background-color: #e6e6e6;
+            border: 0;
+            border-bottom: 1px solid grey;
+            font-size: 19px;
+            border-radius: 0;
+            width: fit-content;        
+        }
+        #correo_suscripcion{
+            width: fit-content;
+            background-color: #e6e6e6;
+            border: 0;
+            font-size: 20px;
+            border-bottom: 1px solid grey;
+            border-radius: 0;
+        }
+
+        .stylish-input-group .input-group-addon {
+            background-color: transparent !important;
+            border: 0;
+        }
+
+  .add-to-cart, .like {
+    background: #ff9f1a;
+    padding: 1.2em 1.5em;
+    border: none;
+    text-transform: UPPERCASE;
+    font-weight: bold;
+    color: #fff;
+    -webkit-transition: background .3s ease;
+            transition: background .3s ease; }
+    .add-to-cart:hover, .like:hover {
+      background: #b36800;
+      color: #fff; }
+  
+  .not-available {
+    text-align: center;
+    line-height: 2em; }
+    .not-available:before {
+      font-family: fontawesome;
+      content: "\f00d";
+      color: #fff; }
+  
+  .orange {
+    background: #ff9f1a; }
+  
+  .green {
+    background: #85ad00; }
+  
+  .blue {
+    background: #0076ad; }
+  
+  .tooltip-inner {
+    padding: 1.3em; }
+  
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(3);
+              transform: scale(3); }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1); } 
+            }
+
+/* TRABAJOS.HTML */
+#trabajos{
+    padding-top: 50px;
+}

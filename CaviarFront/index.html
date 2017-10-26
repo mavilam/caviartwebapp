@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Caviart</title>
 
@@ -29,13 +27,14 @@
     <!-- Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
     <link href="css/caviart.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/peromingostyle.css">
     <link href="css/animate.css" rel="stylesheet">
 
-    <!-- Prueba para activar animaciones al hacer Scroll -->
-    <script src="imakewebthings-waypoints-34d9f6d/lib/noframework.waypoints.min.js"></script>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
 
-
+    <!--Funcionalidad de la web-->
+    <script src="js/peromingofunc.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -48,289 +47,194 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
+    <!--NAVEGACION-->
     <nav class="navbar navbar-custom" role="navigation">
         <div class="container">
-          <!--
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
-                </a>
-            </div>
-        -->
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <!--<div class="collapse navbar-collapse navbar-center navbar-main-collapse"> Navbar collapse-->
-
-              <div class=" navbar navbar-center navbar-main"> <!--Navbar no collapse-->
-
-              <ul class="col-xs-12 nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <div class=" navbar navbar-center navbar-main">
+                <ul class="nav navbar-nav row-peromingo">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li  class="col-xs-4">
-                        <a class="page-scroll text-left" href="#quienes">Quienes</a>
+                    <li>
+                        <a class="caviart-scroll text-left" href="#quienes">Quienes</a>
                     </li>
-                    <li  class="col-xs-4">
-                        <a class="page-scroll text-center" href="#trabajos">Trabajos</a>
+                    <li>
+                        <a class="caviart-scroll text-center" href="trabajos.html">Trabajos</a>
                     </li>
-                    <li  class="col-xs-4">
-                        <a class="page-scroll text-right" href="#contact">Contacto</a>
+                    <li>
+                        <a class="caviart-scroll text-right" href="#contact">Contacto</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-                          <img id="logo_caviart" class="col-xs-12" src="img/CAVIART_blanco.png" alt="" style="margin-bottom:100px; ">
-
-                        <!--<a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a> Boton de la plantilla original para el scroll-->
+    <!-- Header -->
+    <header id="cabecera">
+        <div class="container">
+            <div id="div_reproductor" class="vid-container">
+                <img id="logo_caviart" src="img/logo_caviart_trans.png" alt="Logo Caviart">
+            </div>
+            <div class="separator">
+                <h2 id="titulo_video"></h2>
+            </div>
+            <div class="vid-list-container">
+                <!--maximo de videos = 7-->
+                <div class="vid-list">
+                    <!--agregar 't=11s' al final del data-src para que empiece en el segundo que le indiques
+                            agregar '?autoplay=1' para reproducir directamente (autoplay=0 = no)-->
+                    <div class="vid-item scaleIn scaleOut" data-src="https://www.youtube.com/embed/qHPEUqtMDVc?autoplay=1;rel=0;showinfo=0;autohide=1">
+                        <div class="thumb">
+                            <i class="fa fa-play-circle-o play-icon"></i>
+                            <img src="https://i.ytimg.com/vi/qHPEUqtMDVc/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLD-5bKzmIzuAmRnhDRlYqo_OMcIeg">
+                        </div>
+                        <div class="desc">Stop Mannequin Challenge "COMUNICADO"</div>
                     </div>
+                    <div class="vid-item scaleIn scaleOut" data-src="https://www.youtube.com/embed/eRSCqCVQOUg?autoplay=1;rel=0;showinfo=0;autohide=1">
+                        <div class="thumb">
+                            <i class="fa fa-play-circle-o play-icon"></i>
+                            <img src="https://i.ytimg.com/vi/eRSCqCVQOUg/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCoxck5qoLV0ioolI7nGkBjTtEJQw">
+                        </div>
+                        <div class="desc">#StopMannequinChallenge "REVOLUCIÓN"</div>
+                    </div>
+                    <div class="vid-item scaleIn scaleOut" data-src="https://www.youtube.com/embed/eRSCqCVQOUg?autoplay=1;rel=0;showinfo=0;autohide=1">
+                        <div class="thumb">
+                            <i class="fa fa-play-circle-o play-icon"></i>
+                            <img src="https://i.ytimg.com/vi/eRSCqCVQOUg/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCoxck5qoLV0ioolI7nGkBjTtEJQw">
+                        </div>
+                        <div class="desc">#StopMannequinChallenge "REVOLUCIÓN"</div>
+                    </div>
+                    <div class="vid-item scaleIn scaleOut" data-src="https://www.youtube.com/embed/qPAW4_2x04o?autoplay=1;rel=0;showinfo=0;autohide=1">
+                        <div class="thumb">
+                            <i class="fa fa-play-circle-o play-icon"></i>
+                            <img src="https://i.ytimg.com/vi/qPAW4_2x04o/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDAG5adkZftTq060ShR_xUU5I1XTQ">
+                        </div>
+                        <div class="desc">Blue 24/7</div>
+                    </div>
+                    <div class="vid-item scaleIn scaleOut" data-src="https://www.youtube.com/embed/YPHCKuQMfgM?autoplay=1;rel=0;showinfo=0;autohide=1">
+                        <div class="thumb">
+                            <i class="fa fa-play-circle-o play-icon"></i>
+                            <img src="https://i.ytimg.com/vi/YPHCKuQMfgM/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB6Vql411ram7LaKJgzzEPdFKK_dQ">
+                        </div>
+                        <div class="desc">A tiros</div>
+                    </div>
+
+                    <div class="vid-item scaleIn scaleOut" data-src="https://www.youtube.com/embed/HKxAchTw95s?autoplay=1;rel=0;showinfo=0;autohide=1">
+                        <div class="thumb">
+                            <i class="fa fa-play-circle-o play-icon"></i>
+                            <img src="https://i.ytimg.com/vi/HKxAchTw95s/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAeNguTIMFNw2KeaUa_q90wdZuLzA">
+                        </div>
+                        <div class="desc">Quien no pierde no gana</div>
+                    </div>
+
+                    <div class="vid-item scaleIn scaleOut" data-src="https://www.youtube.com/embed/LYpSgczkchE?autoplay=1;rel=0;showinfo=0;autohide=1">
+                        <div class="thumb">
+                            <i class="fa fa-play-circle-o play-icon"></i>
+                            <img src="https://i.ytimg.com/vi/LYpSgczkchE/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCjDXwwSfwy83DLmBg9Gl_WuJ3xtg">
+                        </div>
+                        <div class="desc">Reel Eventos Caviart</div>
+                    </div>
+
                 </div>
-
-                <script type="text/javascript">
-
-                </script>
-
-                <div class="row col-lg-12">
-                  <div class="col-xs-2" style="margin:0px; padding: 0px;">
-                      <img class="col-xs-12 prueba_transicion" src="img/cartel1_miniatura.png" alt="" style="margin:0px; padding: 0px;"  >
-
-                        <!--<a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a> Boton de la plantilla original para el scroll-->
-                    </div>
-                    <div class="col-xs-2" style="margin:0px; padding: 0px;">
-                      <img class="col-xs-12 prueba_transicion" src="img/logo_caviart_fondo.png" alt="" style="margin:0px; padding: 0px;"  >
-
-                        <!--<a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a> Boton de la plantilla original para el scroll-->
-                    </div>
-                    <div class="col-xs-2" style="margin:0px; padding: 0px;">
-                      <img class="col-xs-12 prueba_transicion" src="img/logo_caviart_fondo.png" alt="" style="margin:0px; padding: 0px;"  >
-
-                        <!--<a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a> Boton de la plantilla original para el scroll-->
-                    </div>
-                    <div class="col-xs-2" style="margin:0px; padding: 0px;">
-                      <img class="col-xs-12 prueba_transicion" src="img/logo_caviart_fondo.png" alt="" style="margin:0px; padding: 0px;"  >
-
-                        <!--<a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a> Boton de la plantilla original para el scroll-->
-                    </div>
-                    <div class="col-xs-2" style="margin:0px; padding: 0px;">
-                      <img class="col-xs-12 prueba_transicion" src="img/logo_caviart_fondo.png" alt="" style="margin:0px; padding: 0px;"  >
-
-                        <!--<a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a> Boton de la plantilla original para el scroll-->
-                    </div>
-                    <div class="col-xs-2" style="margin:0px; padding: 0px;">
-                      <img class="col-xs-12 prueba_transicion" src="img/logo_caviart_fondo.png" alt="" style="margin:0px; padding: 0px;"  >
-
-                        <!--<a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a> Boton de la plantilla original para el scroll-->
-                    </div>
+            </div>
+            <div class="arrows">
+                <div class="arrow-left">
+                    <i class="fa fa-chevron-left fa-lg"></i>
+                </div>
+                <div class="arrow-right">
+                    <i class="fa fa-chevron-right fa-lg"></i>
                 </div>
             </div>
         </div>
     </header>
 
-    <script type="text/javascript">
-
-      document.getElementById('logo_caviart').addEventListener('mouseover', function(){
-        document.getElementById('logo_caviart').className = "col-xs-12 animated zoomOut"
-        document.getElementById("logo_caviart").addEventListener("animationend", function(){
-          document.getElementById("logo_caviart").src = "img/logo_caviart_fondo.png"
-          document.getElementById("logo_caviart").className =  "col-xs-12 animated zoomIn"
-        }, false);
-
-      })
-      document.getElementById('logo_caviart').addEventListener('mouseout', function(){
-        document.getElementById('logo_caviart').className = "col-xs-12 animated zoomIn"
-
-      })
-
-
-    </script>
-
-
-
     <!-- About Section -->
+    <section id="quienes" class="container content-section text-center">
+        <div class="row-peromingo cabecera-seccion">
+            <div class="div-nombre-seccion">
+                <p class="nombre-seccion">Quienes</p>
+            </div>
+            <div class="div-logo-seccion">
+                <a href="#page-top">
+                    <img src="img/logo_caviart_pez.png" class="logo-seccion">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p id="random-frase">"por eso fuma, fuma fuma sólo vuela"</p>
+            </div>
+        </div>
+        <div class="row texto-quienes">
+            <div class="col-xs-12">
+                <p style="font-size:26px">Productora independiente con base en Madrid
+                    <br>Soluciones para todo tipo de problemas de comunicación
+                    <br>Caviar a precio de lumpo
+                    <br>
+                    <span style="font-size:large">No producimos caviar</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trabajos Section -->
     
-        <section id="quienes" class="container content-section text-center" style="padding-top: 75px">
-            <div class="row col-xs-12" style="padding-bottom:30px;">
-                <p class="col-xs-3" style="margin:0px; font-size:x-large; vertical-align:center">Quienes</p>
-                <a href="#page-top" class="col-xs-2 col-xs-offset-7"><img class="col-xs-12" src="img/logo_caviart_fondo.png" style="min-width:75px; max-width: 100px; padding: 0px"></a>
-            </div>
-            <div class="row">
-                <div class="col--8 col-lg-offset-2">
-                    <img id="logo_caviart" class="col-xs-8 col-xs-offset-2" src="img/text_caviart.svg" alt="" style="margin-bottom:30px;">
+
+
+    <div id="contact-background" class="col-xs-12" style="padding:0px">
+        <!-- Contact Section -->
+        <section id="contact" class="container content-section text-center" style="margin-top:100px; padding-top:100px;margin-bottom:100px; padding-bottom:100px">
+            <div class="row-peromingo cabecera-seccion">
+                <div class="div-nombre-seccion">
+                    <p class="nombre-seccion">Contacto</p>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2">
-                    <p class="col-xs-12" style="margin:0px; font-size:x-large">Productora independiente con base en Madrid</p>
-                    <p class="col-xs-12" style="margin:0px; font-size:x-large">Soluciones para todo tipo de problemas de comunicación</p>
-                    <p class="col-xs-12" style="font-size:x-large">Caviar a precio de lumpo</p>
-                    <p class="col-xs-12" style="font-size:large">No producimos caviar</p>
-                    <p class="col-xs-12" style="font-size:x-large">caviart.mail@gmail.com</p>
+                <div class="div-logo-seccion">
+                    <a href="#page-top">
+                        <img src="img/logo_caviart_pez.png" class="logo-seccion">
+                    </a>
                 </div>
             </div>
-
-        </section>
-            <div id="quienes-background" class="col-xs-12" style="padding-left:0px; padding-right: 0px" ></div>
-
-
-    <script type="text/javascript">
-    var waypoint1 = new Waypoint({
-      element: document.getElementById('prueba_scroll'),
-      handler: function(direction) {
-        console.log(this.element.id + ' triggers at ' + this.triggerPoint)
-        document.getElementById('prueba_scroll').className = "animate zoomIn"
-
-      },
-      offset: '100%'
-    })
-    </script>
-
-
-
-
-    <!-- Download Section -->
-    <div id="trabajos-background" class="col-xs-12" style="padding-left:0px; padding-right: 0px" >
-        <section id="trabajos" class="container content-section text-center">
-            <div class="row col-xs-12" style="padding-bottom:30px; padding-right:0px; padding-left: 0px">
-                <div class="col-xs-2 col-xs-offset-5" style="padding: 0px" >   
-                    <p style="margin:0px; font-size:x-large; vertical-align:center">Trabajos</p>
+            <div class="column" id="formulario-caviart">
+                <p class="col-xs-6 formulario-text">¿Quieres estar al día de nuestras novedades?</p>
+                <div class="input-group stylish-input-group col-xs-6" id="div_correo_suscripcion">
+                    <input id="correo_suscripcion" type="text" class="form-control" placeholder="suscribete_aqui@gmail.com">
                 </div>
-                <a href="#page-top" class="col-xs-2 col-xs-offset-3" style="padding: 0px"><img class="col-xs-12" src="img/logo_caviart_fondo.png" style="min-width:75px; max-width: 100px; padding: 0px"></a>
+                <div class="col-xs-6" id="check_suscripcion">
+                    <span><input type="checkbox" name="suscri" id="checkSuscri"> </span>
+                    <span>Acepto suscribirme a vuestras noticias y nuevas publicaciones</span>
+                </div>
+                <button type="button" class="btn btn-default col-xs-6" value="enviar" id="enviarSuscri">Enviar</button>
+                <p class="col-xs-6" id="suscripcion_completa">
+                    ¡Gracias por suscribirte, no te arrepentirás!
+                </p>
+                <p id="correo" class="col-xs-6">
+                    <strong>caviart.mail@gmail.com</strong>
+                </p>
             </div>
-            <div class="download-section">
-                <div class="container">
-            <div class="row col-xs-12" style="padding-bottom:30px; padding-right:0px; padding-left: 0px">
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 15px">
-                            <a href="/proyectos">
-                                <img src='img/cartel_quien_no_pierde.png' class="img-responsive" alt="Image"/ style="width: 100%">
-                             </a>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 15px">
-                            <a href="/proyectos">
-                                <img src='img/cartel_mannekin.png' class="img-responsive" alt="Image"/>
-                             </a>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 15px">
-                            <a href="/proyectos">
-                                <img src='img/cartel_blue.png' class="img-responsive" alt="Image"/>
-                             </a>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 15px">
-                            <a href="/proyectos">
-                                <img src='img/cartel_a_tiros.png' class="img-responsive" alt="Image"/>
-                             </a>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 15px">
-                            <a href="/proyectos">
-                                <img src='img/cartel_blue.png' class="img-responsive" alt="Image"/>
-                             </a>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 15px">
-                            <a href="/proyectos">
-                                <img src='img/cartel_a_tiros.png' class="img-responsive" alt="Image"/>
-                             </a>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 15px">
-                            <a href="/proyectos">
-                                <img src='img/cartel_mannekin.png' class="img-responsive" alt="Image"/>
-                             </a>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 15px">
-                            <a href="/proyectos">
-                                <img src='img/cartel_quien_no_pierde.png' class="img-responsive" alt="Image"/ style="width: 100%">
-                             </a>
-                        </div>
-                    </div>
+            <div class="row-peromingo" id="contact-data">
+                <div id="telefono">
+                    <span>675 85 85 92</span>
+                </div>
+                <div>
+                    <a id="fb-icon" href="https://www.facebook.com/caviart.oficial/">
+                        <i class="fa fa-facebook-official" style="font-size: 50px"></i>
+                    </a>
+                    <a id="youtube-icon" href="https://www.youtube.com/channel/UC_frVKrqhdtNSmPy2BIJTqA/">
+                        <i class="fa fa-youtube" style="font-size: 50px"></i>
+                    </a>
+                    <a id="instagram-icon" href="https://www.instagram.com/caviart.oficial/">
+                        <i class="fa fa-instagram" style="font-size: 50px"></i>
+                    </a>
                 </div>
             </div>
         </section>
     </div>
-
-
-<div id="contact-background" class="col-xs-12" style="padding:0px" >
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center" style="margin-top:100px; padding-top:100px;margin-bottom:100px; padding-bottom:100px; margin-bottom:50px; padding-bottom: 50px">
-      <div class="row" class="col-xs-8 col-lg-offset-2" style="padding-bottom:25px">
-        <div class="col-xs-4 col-xs-offset-8">
-            <p style="margin:0px; font-size:x-large; vertical-align:center">Contacto</p>
-        </div>
-      </div>
-      <div class="row" style="padding-bottom:50px">
-          <div class="col--8 col-lg-offset-2" style="padding-bottom:50px">
-              <p style="margin:0px; font-size:40px; vertical-align:center; padding-left:5px; padding-right: 5px">"por eso fuma, fuma fuma sólo vuela"</p>
-          </div>
-          <div class="col-lg-8 col-lg-offset-2" >
-            <div class="col-xs-12">
-                <p class="col-xs-6" style="margin:10px; font-size:25px">¿Eres empresa?</p>
-            </div>
-            <div class="col-xs-12">
-                <p class="col-xs-6 col-xs-offset-6" style="margin:10px; font-size:25px">¿Eres un ser humano?</p>
-            </div>
-            <div class="col-xs-12">
-                <p class="col-xs-6" style="margin:10px; font-size:25px">Email</p>
-            </div>
-            <div class="col-xs-12">
-                <p class="col-xs-6" style="margin:10px; font-size:25px">Cuentanos</p>
-            </div>
-            <div class="col-xs-12">
-                <p class="col-xs-6" style="margin:10px; font-size:15px">Acepto la política de privacidad</p>
-            </div>
-            <div class="col-xs-12">
-                <p class="col-xs-6" style="margin:10px; font-size:15px">Quiero estar al tanto de nuevos proyectos</p>
-            </div>
-          </div>
-      </div>
-        <div class="col-xs-12">
-            <div id="logo-contacto" class="col-xs-3 col-sm-2">
-                <a href="#page-top">
-                    <img class="col-xs-12" src="img/logo_caviart_fondo.png"style="max-width:150px; min-width:75px; max-width:100px; padding:0px" >
-                </a>
-            </div>
-            <div class="col-xs-6" style="text-align:center; padding:0px;" >
-                <p id="telefono" class="col-xs-12" style="margin-bottom:0px; margin-left:0px; ">675 85 85 92</p>
-            </div>
-            <div id="icons" class="col-xs-3" style="padding-left:0px; padding-right: 0px">
-                 <a id="fb-icon" href="https://www.facebook.com/caviart.oficial/"><i class="fa fa-facebook-official" style="font-size: 50px"></i></a>
-                <a id="youtube-icon" href="https://www.youtube.com/channel/UC_frVKrqhdtNSmPy2BIJTqA/"><i class="fa fa-youtube" style="font-size: 50px"></i></a>
-                <a id="instagram-icon" href="https://www.instagram.com/caviart.oficial/"><i class="fa fa-instagram"  style="font-size: 50px"></i></a>
-            </div>
-        </div>
-    </section>
-</div>
     <footer>
         <div class="container text-center">
             <p>Copyright &copy; Caviart 2017</p>
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -342,21 +246,6 @@
     <script src="js/grayscale.js"></script>
 
     <style>
-        #contact-background{
-            background-image: url("img/caviartcontacto1.png");
-            background-size:100% auto;
-            background-repeat: no-repeat;
-            background-position:center;
-
-        }
-
-        #quienes-background{
-            background-image: url("img/pezquienes_mod.png");
-            background-size:100% auto;
-            background-repeat: no-repeat;
-            background-position:bottom;
-
-        }
     </style>
 
 </body>
